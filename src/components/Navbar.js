@@ -2,7 +2,7 @@ import React from "react";
 import { CiSearch } from "react-icons/ci";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import personImage from "../assets/person.png";
-function Navbar() {
+function Navbar({ onchange }) {
   return (
     <div className="flex justify-between items-center p-3 h-20 w-full">
       <div className="relative ml-4">
@@ -11,6 +11,7 @@ function Navbar() {
           type="text"
           placeholder="Search or type"
           className="rounded-md p-2 outline-none indent-4 bg-grey placeholder:text-darkGrey"
+          onChange={onchange}
         />
       </div>
       <div className="flex items-center gap-4">

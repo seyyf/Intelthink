@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FiSettings } from "react-icons/fi";
 import { IoCarSharp } from "react-icons/io5";
 import { MdDashboard } from "react-icons/md";
@@ -33,6 +33,8 @@ const SECOND_MENU = [
 ];
 
 function SideBar({ children }) {
+  const [query, setQuery] = useState("");
+  const search = (data) => {};
   return (
     <div className="flex">
       <div className="justify-between flex flex-col h-[100vh] p-6">
@@ -72,8 +74,8 @@ function SideBar({ children }) {
         </div>
       </div>
       <div className="flex flex-col w-[calc(100vw-10.2rem)]">
-        <Navbar />
-        <main className="h-[calc(100vh-5rem)] bg-grey">{children}</main>
+        <Navbar onchange={(e) => setQuery(e.target.value)} />
+        <main className="h-full bg-grey overflow-y-scroll">{children}</main>
       </div>
     </div>
   );

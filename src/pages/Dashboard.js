@@ -9,7 +9,7 @@ import Setup from "../components/UI/Setup";
 function Dashboard() {
   return (
     <div className="p-4 flex flex-col gap-4">
-      <div className="flex gap-4">
+      <div className="grid xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4">
         <Card
           className="hover:bg-purple"
           bgCardColor="bg-purple"
@@ -39,28 +39,32 @@ function Dashboard() {
           title="Tire Wear"
         />
       </div>
-      <div className="flex gap-4">
-        <Setup />
-        <PersonCard
-          mainText="You have earned"
-          number="20"
-          word="Badges"
-          bottomText="Hooray! Way to go Mohammed"
-          image={Person1}
-          className="bg-darkBlue"
-          colorNumber="text-carrot"
-          colorBottomText="text-carrot"
-        />
-        <PersonCard
-          mainText="You have earned"
-          number="1500"
-          word="Points"
-          bottomText="Redeem and claim your rewards!"
-          image={Person2}
-          className="bg-[#6E1946]"
-          colorNumber="text-[#FAC39B]"
-          colorBottomText="text-[#FAC39B]"
-        />
+      <div className="grid xl:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-4">
+        <div>
+          <Setup className="w-75%" />
+        </div>
+        <div className="grid xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-4">
+          <PersonCard
+            mainText="You have earned"
+            number="20"
+            word="Badges"
+            bottomText="Hooray! Way to go Mohammed"
+            image={Person1}
+            className="bg-darkBlue"
+            colorNumber="text-carrot"
+            colorBottomText="text-carrot"
+          />
+          <PersonCard
+            mainText="You have earned"
+            number="1500"
+            word="Points"
+            bottomText="Redeem and claim your rewards!"
+            image={Person2}
+            className="bg-[#6E1946]"
+            colorNumber="text-[#FAC39B]"
+            colorBottomText="text-[#FAC39B]"
+          />
+        </div>
       </div>
       <DashboardCar />
     </div>

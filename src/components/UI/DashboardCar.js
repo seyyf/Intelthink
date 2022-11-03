@@ -20,12 +20,12 @@ function DashboardCar() {
     DashboardData();
   }, []);
   return (
-    <div className="flex gap-4">
+    <div className=" gap-4 grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
       {car.map((car) => {
         return (
           <div
             key={car.id}
-            className={`bg-[${car.color}]rounded-md p-6 w-full`}
+            className={`bg-[${car.color}] bg-white rounded-md p-6 w-full`}
           >
             <div className="flex items-center gap-4">
               <FiRefreshCcw className="cursor-pointer" />

@@ -15,7 +15,7 @@ function Card({
 }) {
   return (
     <div
-      className={`group rounded-md flex flex-col bg-white items-center w-full gap-12 hover:${bgCardColor} p-6`}
+      className={`group rounded-md flex flex-col bg-white items-center w-full gap-6 hover:${bgCardColor} p-6`}
     >
       <div>
         {/* <img src={image} alt="" className={`${className}`} /> */}

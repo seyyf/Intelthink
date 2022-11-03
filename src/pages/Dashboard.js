@@ -2,6 +2,7 @@ import React from "react";
 import Person1 from "../assets/Person1.png";
 import Person2 from "../assets/Person2.png";
 import Card from "../components/UI/Card";
+import DashboardCar from "../components/UI/DashboardCar";
 import PersonCard from "../components/UI/PersonCard";
 import Setup from "../components/UI/Setup";
 
@@ -61,6 +62,7 @@ function Dashboard() {
           colorBottomText="text-[#FAC39B]"
         />
       </div>
+      <DashboardCar />
     </div>
   );
 }
